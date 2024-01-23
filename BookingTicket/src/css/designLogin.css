@@ -1,0 +1,15 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 12, 2023, 11:55:35 AM
+    Author     : owner
+*/
+.login-btn{
+    -fx-background-color:linear-gradient(to bottom right, #35529d, #2371d0);
+    -fx-background-radius:8px;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-cursor: hand;
+}

@@ -1,0 +1,54 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.top-form{
+    -fx-background-color:#fff;
+    -fx-border-color: #000;
+    -fx-border-width: .2px .2px .4px .2px;
+}
+
+.nav-form{
+    -fx-background-color:#3ECDFF;
+}
+
+.nav-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+.nav-btn-tolak{
+    -fx-background-color: #F00000;
+    -fx-background-radius:8px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+.nav-btn-terima{
+    -fx-background-color: #2CC400;
+    -fx-background-radius:8px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+.bg-white{
+    -fx-border-color: #000;
+    -fx-bakground-color:#fff;
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0, .3), 8,0,0,0);
+    -fx-background-radius: 8px;
+}
+
+.nav-btn-clear{
+    -fx-background-color: #00008B;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}

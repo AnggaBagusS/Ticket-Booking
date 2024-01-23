@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="855.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookingticket.DashboardUserController">
+    <stylesheets>
+        <URL value="@dashboarduser.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="510.0" prefWidth="855.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <BorderPane prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <top>
+                        <AnchorPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="800.0" styleClass="top-form" stylesheets="@dasboard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="40.0" layoutY="12.0" text="Ticket Booking">
+                                       <font>
+                                          <Font name="Microsoft Sans Serif" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIconView glyphName="TICKET" layoutX="14.0" layoutY="27.0" size="20" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <left>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@dasboard.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="75.0" layoutY="197.0" size="70" />
+                              <Label layoutX="65.0" layoutY="207.0" text="Welcome" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft Sans Serif" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="79.0" layoutY="234.0" text="User" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft Sans Serif" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="signout" layoutX="75.0" layoutY="266.0" mnemonicParsing="false" onAction="#signout" prefHeight="30.0" prefWidth="66.0" styleClass="nav-btn" stylesheets="@dasboard.css" text="Logout" />
+                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" layoutX="67.0" layoutY="287.0" size="18" />
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@dasboard.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="90.0" prefHeight="470.0" prefWidth="655.0" styleClass="anchor-pane-back" stylesheets="@dashboarduser.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="12.0" layoutY="14.0" prefHeight="207.0" prefWidth="634.0" styleClass="anchor-pane" stylesheets="@dashboarduser.css">
+                                       <children>
+                                          <AnchorPane layoutY="-3.0" prefHeight="210.0" prefWidth="210.0" styleClass="info-card" stylesheets="@dashboarduser.css">
+                                             <children>
+                                                <ImageView fx:id="imageView" fitHeight="200.0" fitWidth="200.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <viewport>
+                                                      <Rectangle2D height="200.0" minX="5.0" minY="5.0" width="200.0" />
+                                                   </viewport></ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <TableView fx:id="tvData" layoutX="212.0" prefHeight="208.0" prefWidth="422.0" styleClass="tabel-pane" stylesheets="@dashboarduser.css">
+                                            <columns>
+                                              <TableColumn fx:id="colId" prefWidth="55.0" text="Id" />
+                                              <TableColumn fx:id="colName" prefWidth="138.0" text="Name" />
+                                                <TableColumn fx:id="colCategory" prefWidth="116.0" text="Category" />
+                                                <TableColumn fx:id="colDate" prefWidth="113.0" text="Date" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="227.0" prefHeight="231.0" prefWidth="629.0" styleClass="anchor-pane" stylesheets="@dashboarduser.css">
+                                       <children>
+                                          <Label layoutX="349.0" layoutY="16.0" text="Price">
+                                             <font>
+                                                <Font name="Microsoft Sans Serif" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="25.0" layoutY="14.0" text="Purchase Ticket">
+                                             <font>
+                                                <Font name="Microsoft Sans Serif" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="43.0" layoutY="56.0" text="Special Class :">
+                                             <font>
+                                                <Font name="Microsoft Sans Serif" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="44.0" layoutY="98.0" text="Normal Class :">
+                                             <font>
+                                                <Font name="Microsoft Sans Serif" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="priceSpesial" layoutX="350.0" layoutY="55.0" text="Rp0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="priceNormal" layoutX="350.0" layoutY="105.0" text="Rp0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="273.0" layoutY="152.0" text="Total: ">
+                                             <font>
+                                                <Font name="Microsoft Sans Serif" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totalPrice" layoutX="350.0" layoutY="151.0" text="Rp0.0">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="buyBtn" layoutX="337.0" layoutY="192.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="60.0" styleClass="nav-btn-terima" text="Buy">
+                                             <stylesheets>
+                                                <URL value="@designLogin.css" />
+                                                <URL value="@dasboard.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Button fx:id="clearBtn" layoutX="65.0" layoutY="145.0" mnemonicParsing="false" onAction="#clear" styleClass="login-btn" text="Clear">
+                                             <stylesheets>
+                                                <URL value="@designLogin.css" />
+                                                <URL value="@dasboard.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Spinner fx:id="specialQantity" layoutX="174.0" layoutY="52.0" prefHeight="25.0" prefWidth="109.0" />
+                                          <Spinner fx:id="normalQuantity" layoutX="175.0" layoutY="102.0" prefHeight="25.0" prefWidth="107.0" />
+                                          <Button fx:id="selectBtn" layoutX="560.0" layoutY="18.0" mnemonicParsing="false" onAction="#selectAvailabelMovie" styleClass="login-btn" stylesheets="@designLogin.css" text="Select" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
